@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Sortable - Connect lists</title>
+
+  <script type="text/javascript" src="jquery/jquery.js"></script>
+  <script type="text/javascript" src="jquery/jquery-ui.js"></script>  
+
+  <style>
+/*  body {
+    counter-reset:time 6;
+  }
+
+
+  ul {
+    float:left;
+    border: 1px solid #eee;
+    min-height: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    width: 120px;
+  }
+li {
+    border: 1px solid #eee;
+    min-height: 20px;
+  }
+*/
+  </style>
+  <script>
+  // $(function() {
+  //   $( "#sortable1, .sortable2" ).sortable({
+  //     connectWith: ".connectedSortable",
+  //
+  //   });
+  // });
+  </script>
+</head>
+<body>
+ 
+<!-- <ul id="sortable1" class="connectedSortable">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+</ul>
+  -->
+	<div id="schedule">
+		<ul>
+			<li>hi</li>
+		</ul>
+	</div>
+<!-- <ul>
+  <li class="connectedSortable sortable2"></li>
+  <li class="connectedSortable sortable2"></li>
+  <li class="connectedSortable sortable2"></li>
+  <li class="connectedSortable sortable2"></li>
+
+</ul> -->
+<script>
+var schedule = document.getElementById("schedule");
+
+function displayTimeList() {
+	var times ='';
+	for (i = 7; i<=9;i++){
+		times += '<li>0'+parseInt(i)+':00</li>';
+		times += '<li>0'+parseInt(i)+':30</li>';
+		
+	}
+	for (i = 10; i<=24;i++){
+		times += '<li>'+parseInt(i)+':00</li>';
+		times += '<li>'+parseInt(i)+':30</li>';
+		
+	}
+	var timeTable = '<ul>'+times+'</ul';
+	return timeTable
+	
+}
+function init(){
+	
+	schedule.innerHTML = displayTimeList();
+
+    if (!resume()) {
+    }
+}
+
+init();
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+    /* Prevent the text contents of draggable elements from being selectable. */
+    [draggable] {
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+      /* Required to make elements draggable in old WebKit */
+      -khtml-user-drag: element;
+      -webkit-user-drag: element;
+    }
+    .over {
+      background:#999;
+    }
+    li {
+      list-style-type:none;
+      width:200px;
+    }
+    #schedule ol, #schedule ul {
+      display:inline-block;
+      margin:0;
+      padding:0;
+      vertical-align:top;
+    }
+    #schedule ol {
+      width:3em;
+    }
+  </style>
+</head>
+<body>
+    <ul>
+      <li draggable>do the dishes</li>
+      <li draggable>feed the fishes</li>
+      <li draggable>eat a cookie</li>
+    </ul>
+    
+    <div id="schedule">
+
+    
+    <ul>
+      <li draggable>1</li>
+      <li draggable>2</li>
+      <li draggable>3</li>
+    </ul>
+  </div>
+   <script type="text/javascript" src="script-5.js"></script>
+</body>
+</html>

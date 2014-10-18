@@ -1,0 +1,34 @@
+var t = document.getElementById("todo-input"),
+    r = document.getElementById("result");
+//
+// document.addEventListener("keydown", function(e) {
+//   if (document.activeElement == document.body || document.activeElement == null)
+//     {
+//     t.focus();
+//     }
+//   }, false
+// );
+//
+
+
+function addTodoItem(value){
+  var todoItem = document.createElement("p");
+  todoItem.innerHTML = value;
+  todoItem.contentEditable = true;
+  todoItem.addEventListener("keydown", function(e){
+    if (e.keyCode == 13){
+      this.blur();
+    };
+  });
+  document.body.appendChild(todoItem);
+ 
+};
+
+t.addEventListener("keypress", function(e){
+  if (e.keyCode == 13 && t == document.activeElement) {
+    addTodoItem(this.value);
+      // t.insertAdjacentHTML('beforebegin', '<p contentEditable>'+t.value+'</p>');
+      // t.value="";
+      t.blur();
+  };
+}, false);

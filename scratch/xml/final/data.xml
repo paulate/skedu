@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<paintings>
+  <painting>
+    <title>Boardwalk 5</title>
+    <artist>Arnie Palmer</artist>
+    <image>ap1.jpg</image>
+    <price>850</price>
+  </painting>
+  <painting>
+    <title>A Lasting Piece</title>
+    <artist>Arnie Palmer</artist>
+    <image>ap2.jpg</image>
+    <price>450</price>
+  </painting>
+  <painting>
+    <title>Surf at High Tide</title>
+    <artist>Arnie Palmer</artist>
+    <image>ap3.jpg</image>
+    <price>950</price>
+  </painting>
+  <painting>
+    <title>The Games We Play</title>
+    <artist>Arnie Palmer</artist>
+    <image>ap4.jpg</image>
+    <price>850</price>
+  </painting>
+</paintings>
