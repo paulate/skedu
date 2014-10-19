@@ -1,0 +1,112 @@
+html{
+  height:100%; overflow:hidden;
+}
+
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+  min-width:1000px;
+  border-top:10px solid #00bbcc;
+  padding:0 1em;
+  margin:0;
+  height:100%;
+  
+/* might be outdated now */
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  font-style:bold;
+  font-size:1em;
+  padding:1em 0em;
+  margin:0;
+}
+
+
+/* TODOs paragraph style*/
+p {
+  display:inline;
+  margin:0;
+  padding:0;
+  padding-right:.2em;
+  outline:0;
+  border:0;
+}
+
+
+/* DIVS */
+#todobox, #todaybox, #hourbox{
+  height:100%;
+  overflow:scroll;
+  display:inline-block;
+  vertical-align:top;
+  width:30vw;
+  min-width:300px;
+}
+
+/* OL, UL */
+ol, ul{
+  display:inline-block;
+  margin:0;
+  padding:0;
+  vertical-align:top;
+}
+
+/* LIs */
+li {
+  list-style-type:none;
+  height:1.2em;
+  overflow:scroll;
+  
+}
+
+/* for TODOs */
+ul li { 
+  border:#eee solid 1px;
+  padding:1em;
+  margin:.2em;
+  width:200px;
+}
+/* for SCHEDULE TIMES */
+ol li {
+  text-align:right;
+  padding:1em 0;
+  margin:.2em ;
+  border:#fff solid 1px;
+  color:#66bbcc;
+  
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+/* TODOs: dragged over style */
+.over {
+  background:#66aabb;
+}
+
+
+/* to DELETE TODOs */
+/*span{
+  float:right;
+  position:relative;
+  display:none;
+}*/
+
+/* SERVER SIDE SYNC BUTTON*/
+#sync {
+  position:absolute;
+  top:0;
+  right:0;
+  display:none;
+}
