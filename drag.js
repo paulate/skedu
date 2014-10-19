@@ -50,8 +50,10 @@ var listsDragInit = new function() { // this is initialized at the end of this s
  
  // initialize stuff when page loads, still not exactly sure y u need 2 wait 4 pageload
  this.init = function () {
+   console.log('init...');
     if (EventHelpers.hasPageLoadHappened(arguments)) {return;} // for drag and drop (from useragentman)
     if (!resume()) {} // local storage - load cache back into the site      
+      
     // initialize eventListeners for dragging and dropping
     var items = document.querySelectorAll('p');   // "The Text Layer" // every todo-text is in a p element 
     [].forEach.call(items, function(items) {
@@ -127,6 +129,7 @@ var listsDragInit = new function() { // this is initialized at the end of this s
   }
   function deleteTodo(e){
     this.parentNode.innerHTML="";
+    console.log("deleteTodo");
     e.preventDefault();
     save();
   }
